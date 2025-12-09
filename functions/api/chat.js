@@ -19,7 +19,7 @@ export async function onRequestPost(context) {
     }
     
     // Cloudflare Workers AI로 임베딩 생성
-    const embeddingResponse = await env.AI.run('@cf/baai/bge-base-en-v1.5', {
+    const embeddingResponse = await env.AI.run('@cf/baai/bge-small-en-v1.5', {
       text: message
     });
     const embedding = embeddingResponse.data[0];
